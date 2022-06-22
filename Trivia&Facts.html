@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia and Facts</title>
+    <link rel="stylesheet" href="Trivia&Factsdesign.css">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Changa:wght@200;400;600&family=Electrolize&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWxf7/VsX+/1bF/v9Wxf7/VsX+/1bF/v9Wxf76Ozxm/1bF/v9Wxf7/VsX+/1bF/v9Wxf7/VsX+/wAAAAAAAAAAVsX+//////8AAAAAOzxm/zs8Zv9Wxf797fn///7+/v//////Ozxm/wAAAABWxf79Ozxm/0BBav8AAAAAAAAAAFbF/v//////AAAAADs8Zv87PGb/Ozxm/09Naf87PGb/Oztl/zs8Zv8AAAAAOzxm/zs8Zv87PGb/AAAAAAAAAAA7PGb//////zs8Zv87PGb/Ozxm/zs8Zv8AAAAA/////zs8Zv87PGb/AAAAADs8Zv87PGb/Ozxm/wAAAAAAAAAAAAAAABiHnwEAAAAAAAAAAFbF/v9Wxf7/VsX+/wAAAAAAAAAAVsX+/1bF/v9Wxf7/VsX+/wAAAAAAAAAAAAAAADs8Zv87PGb/AAAAAP//////////7vn///////9axv7/AAAAAD2M3f87PGb/Ozxm/////zMAAAAAAAAAAAAAAAA7PGb/Ozxm////////////Ozxm/zs8Zv//////Ozxm/wAAAACWlpb/Ozxm/zs8Zv87PGb/AAAAAAAAAAAAAAAAAAAAAAAAAAA7PGb//////zs8Zv87PGb//////wAAAAAAAAAAVsX+/zs8Zv87PGb/Ozxm/wAAAAAAAAAAAAAAAAAAAAAAAAAAVsX+/1bF/v9Wxf7/VsX+/1bF/v9Wxf7/VsX+/1bF/v9Wxf7/VsX+/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////87PGb///////////87PGb///////////87PGb//////zs8Zv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////Ozxm////////////Ozxm////////////Ozxm////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOzxm/zs8Zv//////Ozxm/zs8Zv//////Ozxm/zs8Zv//////Ozxm/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AACAAQAAkBEAAJARAACBEQAA+MMAAJBHAACAQwAA4MMAAOAHAADgBwAA4AcAAOAHAAD//wAA//8AAA==" rel="icon" type="image/x-icon" />
+   <style>
+    html, body {
+	width: 100%;
+	height:150%;
+  }
+  
+  body {
+	  background: linear-gradient(-45deg, #CC3300, black, brown, #FFCC99);
+	  background-size: 400% 400%;
+	  animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+	  0% {
+		  background-position: 0% 50%;
+	  }
+	  50% {
+		  background-position: 100% 50%;
+	  }
+	  100% {
+		  background-position: 0% 50%;
+	  }
+  }
+
+	#navbanner {
+		position: absolute;
+		width: 65em;
+		left: 300px;
+		top: 25px;
+	}	  
+	 
+    nav{
+		background: orangered;
+		padding: 50px;
+	}
+	nav::after{
+		content: '';
+		clear: both;
+		display: block;
+	}
+	.menu{
+		margin-right: 80px;
+		float: right;
+	}
+	.menu li{
+		display: inline-block;
+		list-style: none;
+		line-height: 20px;
+		font-size: 15px;
+		left: -20px;
+		top: 15px;
+		position: relative;
+		font-family: 'Electrolize', sans-serif;
+	}
+	.menu li a{
+		display: inline-block;
+		color: white;
+		padding: 15px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: x-large;
+		
+	}
+	.menu li a:hover{
+		background: red;
+		color: white;
+		
+		
+	}
+	.menu li:hover .dropdown{
+		display: block;
+	}
+	.dropdown{
+		position: absolute;
+		background: black;
+		display: none;
+		padding: 15px;
+	
+
+	}
+	.dropdown li{
+		display: block;
+		list-style: none;
+		font-size: 15px;
+		text-align: justify;
+		
+	}
+	.logo{
+		text-decoration: none;
+		color: #ffff;
+		font-size: 30px;
+		font-family: 'Trade Winds', cursive;
+		padding: 22px 100px;
+		width: 20%;
+		float: left;
+	}
+	.banner-text{
+		position: absolute;
+		top: 70%;
+		left: 50%;
+		text-align: center;
+		transform: translate(-50%,-50%);
+	}
+	.banner-text h1{
+		font-family: sans-serif;
+		margin: 0;
+		font-size: 40px;
+		color: orange;
+		font-family: 'Koulen', cursive;
+	}
+	.banner-text p{
+		font-size: 21px;
+		margin: 0;
+		color:white;
+	}
+	.banner-text i{
+		font-size: 45px;
+		padding-top: 65%;
+		color: white;
+	}
+	
+    .title{
+        color: #D6D5A8;
+        padding: 10px;
+        width: -200px;
+        border-radius: 50px 20px;
+        text-align: center;
+        font-family: 'Electrolized', sans-serif;
+    }
+
+   </style>
+
+    <body>
+       
+        <div class="logo">
+            <img class = "logo" id ="logopic" src = "logo.png">
+            </div>
+        </div>
+        <div class="bg-img">
+          <img id="navbanner" src="banner2.png">
+          <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="timeline.html">Learn the Evolution <i class="fa-solid fa-chevron-down"></i> </a>
+                <ul class="dropdown">
+                    <li><a href="timeline.html">History Timeline</a></li>
+                    <li><a href="Trivia&Facts.html">Gaming Consoles Trivia/Facts</a></li>
+                    <li><a href="update.html">Gaming Consoles Updates</a></li>
+                </ul></li>
+                <li><a href="About Us.html">About Us <i class="fa-solid fa-chevron-down"></i> </a>
+            <ul class="dropdown">
+              <li><a href="About Us.html">Developers</a></li>
+              <li><a href="webgoalss.html">Web Goals</a></li>
+          </ul></li>
+          <li><a href="Extra.html">Extras<i class="fa-solid fa-chevron-down"></i> </a>
+            <ul class="dropdown">
+              <li><a href="Extra.html">References</a></li>
+              
+          </ul></li>
+            
+        </ul>
+        </nav>
+        </div>
+          </div>
+        </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    
+        <h1 class="title" align="center">FACTS AND TRIVIA<br> DID YOU KNOW?</h1>
+
+
+<div align="center">
+    <div>
+        <div class="container">
+            <img src="bosswilliam.jpeg" alt="Avatar" class="image" ">
+            <div class="overlay  overlayLeft">
+                <div class="text">One of the earliest video games was created by a physicist.<br>
+                    In October 1958, William Higinbotham created Tennis for Two. <br>Its gameplay was similar to Pong, and was displayed on an oscilloscope instead of the traditional LED screen. </div>
+            </div>
+        </div>
+        <div class="container">
+            <img src="gameboy.jpg" alt="Avatar" class="image">
+            <div class="overlay overlayRight">
+                <div class="text">The Gameboy was the first video game console played in space.<br>In 1993, Tetris was brought aboard a Soyuz TM-17 rocket to the MIR Space Station, where the Russian cosmonaut Aleksandr A. Serebrov played it.</div>
+            </div>
+        </div>
+        <div class="container">
+            <img src="esports.jpg" alt="Avatar" class="image">
+            <div class="overlay overlayFade">
+                <div class="text">The earliest known video game/e-sports competition took place on 19 October 1972 at Stanford University for the game Spacewar. </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <img src="playstation2.jpg" alt="Avatar" class="image">
+            <div class="overlay overlayTop" >
+                <div class="text">The PlayStation 2 is the best-selling gaming console of all time.<br>Although relatively old in the console game, the PS2 has outsold every other console in existence up to this point. As of the last record in 2012,<br> sales have reached US$155 million. </div>
+            </div>
+        </div>
+        <div class="container">
+            <img src="rpg.jpg" alt="Avatar" class="image">
+            <div class="overlay overlayBottom">
+                <div class="text">The earliest RPG on a console was released in 1982.<br>Dragonstomper for the Atari 2600 was one of the first-ever RPG’s. Although it didn’t really get much acclaim, critics applauded it for its detail, depth, and ingenuity. Relive your childhood with the recently retroed 2600s.</div>
+            </div>
+        </div>
+        <div class="container">
+            <img src="Gta.jpg" alt="Avatar" class="image">
+            <div class="overlay overlayCross">
+                <div class="text">Grand Theft Auto was supposed to be a racing game.
+                    in which the player controlled a police officer pursuing criminals. However, the game was considered dull, and the concept of playing as a criminal was adopted.</div>
+            </div>
+        </div>
+
+       
+<video autoplay muted loop id="myVideo">
+    <source src="vid4triva.mp4" type="video/mp4">
+  </video>
+  
+  
+  <div class="content">
+    <h1>What Your Favorite VIDEO GAME CONSOLE Says About You!</h1>
+    <p>A video game console can reveal a lot about an individual.
+        Maybe you're a retro player who mocks modern video game consoles despite the fact that your Atari 2600 was released before you could walk. Maybe you got your PS3 because of its Blu-ray capabilities, but you've never bought a Blu-ray disc. Or are you the lone Dreamcast owner who has a vendetta against everyone who hasn't acknowledged the system's enduring influence? Here's to always making fun of our friends' favorite systems.</p>
+    <!-- Use a button to pause/play the video with JavaScript -->
+    <button id="myBtn" onclick="myFunction()">PAUSE</button>
+  </div>
+
+  <p id="copyright"> youtube.com/MVPerry&copy;</p>
+
+  <div>
+    <button onclick="document.location='update.html'" class="glow-on-hover" type="button">CONTINUE THE<br> ADVENTURE!</button>
+    </div>
+    <footer id="colophon" class="site-footer" role="contentinfo">
+        <div class="social-wrapper">
+          <ul>
+            <li>
+              <a href="https://twitter.com/?lang=en" target="_blank">
+                <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" alt="Twitter Logo" class="twitter-icon"></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/" target="_blank">
+                <img src="https://www.mchenryvillage.com/images/instagram-icon.png" alt="Instagram Logo" class="instagram-icon"></a>
+            </li>
+            
+            <li>
+              <a href="https://www.facebook.com/" target="_blank">
+                <img src="http://www.iconarchive.com/download/i54037/danleech/simple/facebook.ico" alt="Facebook Logo" class="facebook-icon"></a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Google%2B" target="_blank">
+                <img src="http://icons.iconarchive.com/icons/marcus-roberto/google-play/256/Google-plus-icon.png" alt="Googleplus Logo" class="googleplus-icon"></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/" target="_blank">
+                <img src="https://lh3.googleusercontent.com/j_RwVcM9d47aBDW5DS1VkdxUYCkDUCB6wZglv4x-9SmsxO0VaFs7Csh-FmKRCWz9r_Ef=w170" alt="Youtube Logo" class="youtube-icon"></a>
+            </li>
+            <li>
+              <a href="https://foursquare.com/" target="_blank">
+                <img src="http://www.iconarchive.com/download/i94258/designbolts/vector-foursquare/Foursquare-2.ico" alt="Foursquare Logo" class="foursquare-icon"></a>
+            </li>
+          </ul>
+        </div>
+      
+        <nav class="footer-nav" role="navigation">
+          <p>Copyright &copy; 2022-
+          > GROUP 4 - INF201. All rights reserved.</p>
+        </nav>
+      </footer>
+
+    </body>
+
+    <script>
+        
+        var video = document.getElementById("myVideo");
+        
+      
+        var btn = document.getElementById("myBtn");
+        
+        
+        function myFunction() {
+          if (video.paused) {
+            video.play();
+            btn.innerHTML = "PAUSE";
+          } else {
+            video.pause();
+            btn.innerHTML = "PLAY";
+          }
+        }
+        </script>
+
+
+</head>
+</html>
